@@ -1,6 +1,6 @@
 {
     "name": "ee-bind-attr",
-    "version": "0.1.0-pre",
+    "version": "0.1.0",
     "author": {
         "name": "Jarek Rencz",
         "email": "jarek.rencz@laboratorium.ee"
@@ -11,7 +11,7 @@
     },
     "main": "dist/ee-bind-attr.js",
     "bugs": {
-        "url": "https://github.com/jquery/jquery/issues"
+        "url": "https://github.com/EE/ee-bind-attr/issues"
     },
     "dependencies": {},
     "devDependencies": {
@@ -38,6 +38,13 @@
             "type": "MIT",
             "url": "https://github.com/EE/ee-bind-attr/blob/master/LICENSE"
         }
+    ],
+    "keywords": [
+        "angular",
+        "directive",
+        "attribute",
+        "bind attributes",
+        "ngBindAttr"
     ],
     "scripts": {
         "build": "npm install && gulp build",
