@@ -55,7 +55,7 @@
      * Each of the keys of the object given to the cbnAttr directive will become the attributes of the element
      * the directive is placed on.
      */
-        .directive('eeBindAttr', function ($parse, cbnAttr) {
+        .directive('eeBindAttr', ["$parse", "cbnAttr", function ($parse, cbnAttr) {
             return {
                 restrict: 'A',
                 link: function (scope, elem, attr) {
@@ -71,6 +71,6 @@
                     }
                 },
             };
-        });
+        }]);
 
 })(angular);

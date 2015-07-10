@@ -10,6 +10,7 @@ var plumber = require('gulp-plumber');
 var runSequence = require('run-sequence');
 var eslint = require('gulp-eslint');
 var jscs = require('gulp-jscs');
+var ngAnnotate = require('gulp-ng-annotate');
 
 var packageName = require('./package.json').name;
 
@@ -42,6 +43,7 @@ gulp.task('build', function () {
     gulp.src(sourceFiles)
         .pipe(plumber())
         .pipe(concat(`${ packageName }.js`))
+        .pipe(ngAnnotate())
         .pipe(gulp.dest(distDirectory))
         .pipe(uglify())
         .pipe(rename(`${ packageName }.min.js`))
