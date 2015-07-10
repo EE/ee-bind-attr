@@ -64,6 +64,26 @@ describe('Module: eeBindAttr', function () {
                 });
             });
 
+            it('should pass attribute values', function () {
+                initializeAndInvoke(function (args) {
+                    var whitelistAlias = args.whitelistAlias;
+                    var whitelist = args.whitelist;
+                    var eeBindAttr = args.eeBindAttr;
+                    var elem = $('<a>');
+                    var attributes = {
+                        target: '_blank',
+                        id: 'you_shall_not_pass',
+                        download: 'foo.txt',
+                    };
+                    var filteredAttributes = eeBindAttr.filterAllowedAttributes(attributes, elem, whitelistAlias);
+
+                    expect(Object.keys(filteredAttributes).length).toBe(whitelist.a.length);
+                    Object.keys(filteredAttributes).forEach(function (attributeName) {
+                        expect(filteredAttributes[attributeName]).toBe(attributes[attributeName]);
+                    });
+                });
+            });
+
             it('should copy the provided map', function () {
                 initializeAndInvoke(function (args) {
                     var whitelistAlias = args.whitelistAlias;

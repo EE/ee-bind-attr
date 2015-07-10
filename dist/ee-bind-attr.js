@@ -43,7 +43,7 @@
                         for (var attributeName in attributes) {
                             if (attributes.hasOwnProperty(attributeName) &&
                                 allowedAttributes.indexOf(attributeName) > -1) {
-                                filteredAttributes[attributeName] = attributeName[attributeName];
+                                filteredAttributes[attributeName] = attributes[attributeName];
                             }
                         }
                         return filteredAttributes;
