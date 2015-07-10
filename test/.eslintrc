@@ -1,0 +1,14 @@
+{
+    "globals": {
+        "console": false,
+        "jasmine": false,
+        "describe": false,
+        "it": false,
+        "module": false,
+        "inject": false,
+        "beforeEach": false,
+        "expect": false,
+        "$": false,
+        "angular": false
+    }
+}

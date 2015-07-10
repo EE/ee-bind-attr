@@ -1,0 +1,47 @@
+{
+    "name": "ee-bind-attr",
+    "version": "0.1.0-pre",
+    "author": {
+        "name": "Jarek Rencz",
+        "email": "jarek.rencz@laboratorium.ee"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/EE/ee-bind-attr"
+    },
+    "main": "dist/ee-bind-attr.js",
+    "bugs": {
+        "url": "https://github.com/jquery/jquery/issues"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "gulp": "3.9.0",
+        "gulp-concat": "2.6.0",
+        "gulp-eslint": "0.15.0",
+        "gulp-jscs": "1.6.0",
+        "gulp-plumber": "1.0.1",
+        "gulp-rename": "1.2.2",
+        "gulp-uglify": "1.2.0",
+        "karma": "0.12.32",
+        "karma-jasmine": "0.3.6",
+        "karma-phantomjs-launcher": "0.2.0",
+        "karma-spec-reporter": "0.0.19",
+        "run-sequence": "1.1.1",
+        "jscs-trailing-comma": "0.4.2"
+    },
+    "engines": {
+        "node": ">=0.8.0"
+    },
+    "license": "MIT",
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/EE/ee-bind-attr/blob/master/LICENSE"
+        }
+    ],
+    "scripts": {
+        "build": "npm install && gulp build",
+        "start": "gulp watch",
+        "test": "gulp test-src"
+    }
+}
