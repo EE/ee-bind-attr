@@ -52,10 +52,10 @@
             };
         })
     /**
-     * Each of the keys of the object given to the cbnAttr directive will become the attributes of the element
+     * Each of the keys of the object given to the eeBindAttr directive will become the attributes of the element
      * the directive is placed on.
      */
-        .directive('eeBindAttr', ["$parse", "cbnAttr", function ($parse, cbnAttr) {
+        .directive('eeBindAttr', ["$parse", "eeBindAttr", function ($parse, eeBindAttr) {
             return {
                 restrict: 'A',
                 link: function (scope, elem, attr) {
@@ -65,7 +65,7 @@
                     }
                     if ('attr' in input && 'whitelist' in input &&
                         typeof input.attr === 'object' && input.attr != null) {
-                        elem.attr(cbnAttr.filterAllowedAttributes(input.attr, elem, input.whitelist));
+                        elem.attr(eeBindAttr.filterAllowedAttributes(input.attr, elem, input.whitelist));
                     } else {
                         throw new Error('eeBindAttr: Input has to be an object with keys `attr` and `whitelist`');
                     }
