@@ -1,5 +1,7 @@
 'use strict';
 
+var packageName = require('./package.json').name;
+
 module.exports = function (config) {
     config.set({
 
@@ -23,7 +25,7 @@ module.exports = function (config) {
             'bower/jQuery/dist/jquery.js',
             'bower/angular/angular.js',
             'bower/angular-mocks/angular-mocks.js',
-            'dist/ee-bind-attrs.min.js',
+            `dist/${ packageName }.min.js`,
             'test/unit/**/*.js',
         ],
 
